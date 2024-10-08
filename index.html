@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Countdown</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Countdown Settings Section -->
+        <div class="countdown-settings">
+            <h2>Countdown Settings</h2>
+
+            <!-- Background Image Selection -->
+            <label for="backgroundSelect">Select Background Image:</label>
+            <select id="backgroundSelect">
+                <option value="url('/images/teen-with-blue-shirt-showing-clock.jpg')">Background 1</option>
+                <option value="url('/images/object-old-timer-background-number.jpg')">Background 2</option>
+                <option value="url('/images/teen-with-blue-shirt-showing-clock.jpg')">Background 3</option>
+            </select>
+
+            <!-- Layout Selection -->
+            <label for="layout">Layout:</label>
+            <select id="layout">
+                <option value="horizontal">Horizontal</option>
+                <option value="vertical">Vertical</option>
+            </select>
+
+            <!-- Background Color Selection -->
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor">
+
+            <!-- Countdown Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="My Countdown">
+
+            <!-- Name Color Selection -->
+            <label for="nameColor">Name Color:</label>
+            <input type="color" id="nameColor">
+
+            <!-- Font Selection -->
+            <label for="fontSelect">Font:</label>
+            <select id="fontSelect">
+                <option value="Arial">Arial</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Poppins">Poppins</option>
+                <option value="Roboto">Roboto</option>
+            </select>
+
+            <!-- Language Selection -->
+            <label for="language">Language:</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="sw">Swahili</option>
+                <option value="rw">Kinyarwanda</option>
+            </select>
+
+            <!-- Timezone and Date/Time -->
+            <label for="timezone">Time Zone:</label>
+            <select id="timezone">
+                <option value="Africa/Johannesburg">Africa/Johannesburg</option>
+                <option value="Africa/Kigali">Africa/Kigali</option>
+                <!-- Add more time zones -->
+            </select>
+
+            <label for="datetime">Set Date & Time:</label>
+            <input type="datetime-local" id="datetime">
+        </div>
+
+        <!-- Countdown Display Section -->
+        <div class="countdown-container" id="countdownContainer">
+            <h1 id="countdownName">My Countdown</h1>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <p id="daysLabel">Days</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <p id="hoursLabel">Hours</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <p id="minutesLabel">Minutes</p>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <p id="secondsLabel">Seconds</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

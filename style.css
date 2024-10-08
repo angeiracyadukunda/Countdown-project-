@@ -1,0 +1,171 @@
+
+/* General Page Load Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in on page load */
+}
+
+/* Countdown Name Animation */
+#countdownName {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Countdown Number Scale Animation */
+.countdown-item span {
+    animation: pulse 1s ease-in-out infinite alternate; /* Numbers will have a subtle pulse effect */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Hover Effect on Countdown Items */
+.countdown-item {
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect when hovering */
+}
+
+.countdown-item:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Inputs and Selects Hover Effect */
+.countdown-settings input[type="color"],
+.countdown-settings input[type="text"],
+.countdown-settings select {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition for hover effects */
+}
+
+.countdown-settings input[type="color"]:hover,
+.countdown-settings input[type="text"]:hover,
+.countdown-settings select:hover {
+    transform: scale(1.05); /* Slight scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+}
+
+
+/* General page layout */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color:blue;  */
+     /* background-image: url('/images/teen-with-blue-shirt-showing-clock.jpg');  */
+     background-size: cover; /* Ensures the image covers the entire page */
+     background-position: center; /* Centers the image */
+     background-repeat: no-repeat; /* Prevents the image from repeating */
+     background-attachment: fixed; /* Ensures the background stays fixed on scroll */
+     transition: background-color 1s ease; 
+}
+
+
+
+/* Flexbox for the main container */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Adjusted for more transparency */ /* Add a slight background to make the content readable */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Countdown Settings Section */
+.countdown-settings {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Adjust the width to take less space */
+}
+
+.countdown-settings label,
+.countdown-settings input,
+.countdown-settings select {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Countdown Display Section */
+.countdown-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Take the remaining available space */
+    text-align: center;
+}
+
+#countdown {
+    display: flex;
+    flex-direction: row; /* Items in a row by default */
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Countdown items */
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+}
+
+.countdown-item span {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Countdown Name Styling */
+#countdownName {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the settings and countdown vertically on smaller screens */
+    }
+
+    .countdown-settings {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .countdown-container {
+        width: 100%;
+    }
+
+    #countdown {
+        flex-direction: column; /* Countdown items in a column on small screens */
+    }
+}
